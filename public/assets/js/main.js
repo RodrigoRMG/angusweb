@@ -589,7 +589,7 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
 
             $.ajax({
                 type: 'POST',
-                url: 'assets/php/subscribe.php',
+                url: 'suscribe',
                 dataType: 'json',
                 data: {
                     email: email
@@ -597,14 +597,14 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
                 cache: false,
                 beforeSend: function(result) {
                     submit.empty();
-                    submit.append('<i class="fa fa-cog fa-spin"></i> Wait...');
+                    submit.append('<i class="fa fa-cog fa-spin"></i> Espere...');
                 },
                 success: function(result) {
-                    if(result.sendstatus == 1) {
-                        ajaxResponse.html(result.message);
+                    if(result.status == "subscribed") {
+                        ajaxResponse.html("Gracias por suscriberte a nuestro boletín de noticias");
                         $form.fadeOut(500);
                     } else {
-                        ajaxResponse.html(result.message);
+                        ajaxResponse.html("Tu suscripción no pudo ser completada");
                     }
                 }
             });

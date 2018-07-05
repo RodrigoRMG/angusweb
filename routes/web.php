@@ -15,6 +15,8 @@ Route::get('/','GeneralController@index');
 
 Route::get('menu','GeneralController@menu');
 
+Route::post('suscribe','GeneralController@suscribe');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
