@@ -350,16 +350,22 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
          /* ---------------------------------------------- */
 
         $(function(){
-            var myPlayer = $(".video-player").mb_YTPlayer();
+
+            setTimeout(function(){ 
+                var myPlayer = $(".video-player").mb_YTPlayer();
 
             myPlayer.on("YTPTime", function (e) {
                 var currentTime = e.time;
                 switch (currentTime) {
                     case 10:
-                        $('#home').css("background-image", "url(http://localhost:8000/image/back2.jpg)"); 
+                        $('#home').css("background-image", "url(http://indexceed.com/angusweb/public/image/back2.jpg)"); 
                         break;
                 }
             });
+
+
+            }, 5000);
+            
         });
 
         $('#video-play').click(function(event) {

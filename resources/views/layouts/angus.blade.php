@@ -8,7 +8,7 @@
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+        <title>Angus Santa Fe</title>
         <link href="assets/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
         <!-- Template specific stylesheets-->
         <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
@@ -22,8 +22,6 @@
         <link href="{{url('assets/lib/simple-text-rotator/simpletextrotator.css')}}" rel="stylesheet">
         <!-- Main stylesheet and color file-->
         <link href="{{url('assets/css/style.css')}}" rel="stylesheet">
-        <link href="{{url('css/style.css')}}" rel="stylesheet">
-        <link href="{{url('css/style-custom.css')}}" rel="stylesheet">
         <link id="color-scheme" href="{{url('assets/css/colors/default.css')}}" rel="stylesheet">
 
     </head>

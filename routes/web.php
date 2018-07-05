@@ -13,6 +13,8 @@
 
 Route::get('/','GeneralController@index');
 
+Route::get('menu','GeneralController@menu');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
