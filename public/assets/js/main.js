@@ -843,14 +843,24 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
             var map = new google.maps.Map(mapElement, mapOptions);
 
             // Let's also add a marker while we're at it
-            var image = new google.maps.MarkerImage('assets/images/map-icon.png');
+            var image = new google.maps.MarkerImage('image/pin.png');
 
             var icon = {
-                url: "assets/images/map-icon.png", // url
+                url: "image/pin.png", // url
                 scaledSize: new google.maps.Size(50, 50), // scaled size
                 origin: new google.maps.Point(0,0), // origin
                 anchor: new google.maps.Point(0, 0) // anchor
             };
+
+            var icon = new google.maps.Marker({
+                position: mkr,
+                icon: image,
+                title: 'Angus',
+                infoWindow: {
+                    content: '<p><strong>Rival</strong><br/>121 Somewhere Ave, Suite 123<br/>P: (123) 456-7890<br/>Australia</p>'
+                },
+                map: map,
+            });
 
         }
 
