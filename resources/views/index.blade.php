@@ -78,15 +78,15 @@
           </div>
         </section>
 
-        <section class="module module-video bg-dark-30" data-background="assets/images/restaurant/coffee_bg.png">
+        <section class="module module-video bg-dark-30" data-background="{{url('image/corte.jpg')}}">
           <div class="container">
             <div class="row">
               <div class="col-sm-6 col-sm-offset-3">
-                <h2 class="module-title font-alt mb-0">The Best Restaurant In Town. Enjoy Your Meal</h2>
+                <h2 class="module-title font-alt mb-0">El mejor restaurante de cortes en la ciudad</h2>
               </div>
             </div>
           </div>
-          <div class="video-player" data-property="{videoURL:'https://www.youtube.com/watch?v=i_XV7YCRzKo', containment:'.module-video', startAt:3, mute:true, autoPlay:true, loop:true, opacity:1, showControls:false, showYTLogo:false, vol:25}"></div>
+          <div class="video-player" data-property="{videoURL:'https://www.youtube.com/watch?v=A4izqFF0fh0', containment:'.module-video', startAt:3, mute:true, autoPlay:true, loop:true, opacity:1, showControls:false, showYTLogo:false, vol:25}"></div>
         </section>
 
         <section class="module" id="menu">
