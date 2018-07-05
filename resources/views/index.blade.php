@@ -200,7 +200,7 @@
                 </div>
               </div>
             </div>
-            <div class="text-center"><a class="btn btn-border-d mt-50" href="{{url('menu')}}">Ver menú completo</a> <a class="btn btn-border-d mt-50" href="{{url('menu.pdf')}}" target="blank">Descargar manú</a><</div>
+            <div class="text-center"><a class="btn btn-border-d mt-50" href="{{url('menu')}}">Ver menú completo</a> <a class="btn btn-border-d mt-50" href="{{url('menu.pdf')}}" target="blank">Descargar menú</a></div>
           </div>
         </section>
 
