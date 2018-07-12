@@ -116,9 +116,21 @@
 
 @include('video')
 
-<section id="map-section">
+<section id="map-section" >
           <div id="map"></div>
+          
         </section>
+
+        <section style="margin-bottom:40px;margin-top:40px;">
+        <div class="text-center">
+        <img src="https://web-assets.waze.com/website/assets/home/map_editing-7df15c15f330a3b3dae4cd8978355ef4e77b1e6dc716cfc0c9f98b0f86f718db.png" width="170px">
+        </div>
+        <div class="text-center" style="margin-top:20px">
+        
+        <a class="btn btn-border-d" target="blank" href="https://waze.com/ul?ll=19.3647072,-99.2657406&navigate=yes">Navegar con Waze</a>
+          </div>
+        </section>
+        
 
              <div class="module-small bg-dark">
           <div class="container">
