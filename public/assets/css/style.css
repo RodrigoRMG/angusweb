@@ -12,7 +12,7 @@ html {
 body {
   background: #fff;
   font: 400 12px/1.8 "Roboto Condensed", sans-serif;
-  color: #666;
+  color: #551328;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -102,7 +102,7 @@ a,
 }
 
 .examples.bg-dark {
-  background: #333;
+  background: #551328;
   border: 0;
 }
 
@@ -250,7 +250,7 @@ a,
 }
 
 .bg-dark {
-  background: #111;
+  background: #551328;
 }
 
 .bg-dark-30:before {
@@ -731,13 +731,13 @@ a,
 
 .btn-border-d {
   background: transparent;
-  border: 1px solid #111111;
-  color: #111;
+  border: 1px solid #551328;
+  color: #551328;
 }
 
 .btn.btn-border-d:hover,
 .btn.btn-border-d:focus {
-  background: #111111;
+  background: #551328;
   color: #fff;
 }
 
@@ -914,14 +914,14 @@ blockquote {
   text-align: center;
   font-weight: 400;
   font-size: 30px;
-  color: #111;
+  color: #551328;
   margin: 0 0 70px;
 }
 
 .module-subtitle {
   text-align: center;
   font-size: 16px;
-  color: #111;
+  color: #551328;
   margin-bottom: 70px;
 }
 
@@ -944,7 +944,7 @@ blockquote {
   display: table-cell;
   white-space: pre;
   padding: 0 8px;
-  color: #111;
+  color: #551328;
 }
 
 /* Finance case study header */
@@ -1241,7 +1241,7 @@ General Styles - Owlcarousel
 	Navbar
 --------------------------------------------------------------*/
 .navbar-custom {
-  background-color: rgba(10, 10, 10, 0.9);
+  background-color: rgba(85,19,40, 0.9);
   border: 0;
   border-radius: 0;
   z-index: 1000;
@@ -1554,7 +1554,7 @@ Google map
 .alt-features-icon {
   line-height: 1.2;
   font-size: 42px;
-  color: #111;
+  color: #551328;
 }
 
 .features-title,
@@ -1563,7 +1563,7 @@ Google map
   letter-spacing: 2px;
   font-weight: 400;
   font-size: 14px;
-  color: #111;
+  color: #551328;
   margin: 16px 0 15px;
 }
 
@@ -1701,7 +1701,7 @@ Google map
 .menu-price {
   margin: 0 0 10px;
   font-size: 14px;
-  color: #111;
+  color: #551328;
 }
 
 .menu-price-detail {

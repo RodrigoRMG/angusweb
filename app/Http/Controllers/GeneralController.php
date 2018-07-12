@@ -4,17 +4,21 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DrewM\MailChimp\MailChimp;
+use App\Categoria;
+use App\Menu;
 
 class GeneralController extends Controller
 {
     public function index()
     {
-        return view('index');
+        $menus=Menu::take(10)->get();
+        return view('index')->with('menus',$menus);
     }
 
     public function menu()
     {
-        return view('menu');
+        $categorias=Categoria::all();
+        return view('menu')->with('categorias',$categorias);
     }
 
     public function suscribe()

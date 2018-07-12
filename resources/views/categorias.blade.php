@@ -6,9 +6,9 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                Menú
+                Categorías
                 <div style="text-align:right">
-                <a class="btn btn-primary" href="{{url('admin/agregarMenu')}}">Agregar platillo</a>
+                <a class="btn btn-primary" href="{{url('admin/agregarCategoria')}}">Agregar categoría</a>
                 </div>
                 
                 </div>
@@ -25,19 +25,19 @@
                         <tr>
                         <th>Nombre</th>
                         <th>Descripción</th>
-                        <th>Categoría</th>
+                        <th>Imagen</th>
                         <th></th>
                         </tr>
                    </thead>
                    <tbody>
-                   @foreach($menus as $menu)
+                   @foreach($categorias as $categoria)
                         <tr>
-                            <td>{{$menu->titulo}}</td>
-                            <td>{{$menu->descripcion}}</td>
-                            <td>{{$menu->categoria}}</td>
+                            <td>{{$categoria->titulo}}</td>
+                            <td>{{$categoria->descripcion}}</td>
+                            <td>{{$categoria->imagen}}</td>
                             <td>
-                                <a class="btn btn-info" href="{{url('admin/modificarMenu')}}/{{$menu->id}}">Modificar</a>
-                                <a class="btn btn-danger" href="{{url('admin/eliminarMenu')}}/{{$menu->id}}">Eliminar</a>
+                                <a class="btn btn-info" href="{{url('admin/modificarCategoria')}}/{{$categoria->id}}">Modificar</a>
+                                <a class="btn btn-danger" href="{{url('admin/eliminarCategoria')}}/{{$categoria->id}}">Eliminar</a>
                             </td>
                         </tr>
                     @endforeach
