@@ -121,13 +121,56 @@
           
         </section>
 
-        <section style="margin-bottom:40px;margin-top:40px;">
-        <div class="text-center">
-        <img src="https://web-assets.waze.com/website/assets/home/map_editing-7df15c15f330a3b3dae4cd8978355ef4e77b1e6dc716cfc0c9f98b0f86f718db.png" width="170px">
-        </div>
-        <div class="text-center" style="margin-top:20px">
-        
-        <a class="btn btn-border-d" target="blank" href="https://waze.com/ul?ll=19.3647072,-99.2657406&navigate=yes">Navegar con Waze</a>
+
+
+        <section class="module" id="menu">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-2 col-sm-offset-5">
+                <div class="alt-module-subtitle"><span class="holder-w"></span>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-8 col-sm-offset-2">
+                <h2 class="module-title font-alt">Eventos</h2>
+              </div>
+            </div>
+            <div class="row multi-columns-row">
+
+            @foreach($eventos as $evento)
+              <div class="col-sm-12">
+                <div class="menu">
+                  <div class="row">
+                  <div class="col-sm-4">
+                  <image src="{{asset('storage/uploads/'.$evento->imagen)}}" width="100%">
+                  </div>
+                    <div class="col-sm-6">
+                    
+                      <h4 class="menu-title font-alt">{{$evento->nombre}}</h4>
+                      <div class="menu-detail font-serif">{{$evento->descripcion}}</div>
+                      <div class="text-center">
+                      @if($evento->url!="")
+                      <a class="btn btn-border-d mt-50" href="{{url($evento->url)}}" target="blank">Ver detalles</a> 
+                      @endif
+                      <a class="btn btn-border-d mt-50" href="{{url('menu.pdf')}}" target="blank">Reservar</a></div>
+                    </div>
+                    <div class="col-sm-2 menu-price-detail">
+                      <h4 class="menu-price font-alt">{{$evento->fecha}}</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              @endforeach
+              @if(count($eventos)==0)
+              <div class="col-sm-6">
+               <h4>Próximamente...</h4>
+              </div>
+              @endif
+                
+              </div>
+            </div>
+           
           </div>
         </section>
         

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Menu extends Migration
+class EventosCreate extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,12 @@ class Menu extends Migration
      */
     public function up()
     {
-        Schema::create('menu', function (Blueprint $table) {
+        Schema::create('eventos', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('titulo');
+            $table->string('nombre');
             $table->string('descripcion');
-            $table->string('precio');
-            $table->integer('categoria');
+            $table->string('fecha');
+            $table->string('imagen')->nullable();
             $table->timestamps();
         });
     }

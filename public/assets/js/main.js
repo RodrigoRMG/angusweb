@@ -624,6 +624,39 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
         var mkr = new google.maps.LatLng(19.3646100, -99.2657079);
         var cntr = (mobileTest) ? mkr : new google.maps.LatLng(19.3646100, -99.2657079);
 
+        function CenterControl(controlDiv, map) {
+
+            // Set CSS for the control border.
+            var controlUI = document.createElement('div');
+            controlUI.style.marginTop = '20px';
+            controlUI.style.backgroundColor = '#fff';
+            controlUI.style.border = '2px solid #fff';
+            controlUI.style.borderRadius = '3px';
+            controlUI.style.boxShadow = '0 2px 6px rgba(0,0,0,.3)';
+            controlUI.style.cursor = 'pointer';
+            controlUI.style.marginBottom = '22px';
+            controlUI.style.textAlign = 'center';
+            controlUI.title = 'Click to recenter the map';
+            controlDiv.appendChild(controlUI);
+    
+            // Set CSS for the control interior.
+            var controlText = document.createElement('div');
+            controlText.style.color = 'rgb(25,25,25)';
+            controlText.style.fontFamily = 'Roboto,Arial,sans-serif';
+            controlText.style.fontSize = '16px';
+            controlText.style.lineHeight = '38px';
+            controlText.style.paddingLeft = '5px';
+            controlText.style.paddingRight = '5px';
+            controlText.innerHTML = '<image src="https://png.icons8.com/color/1600/waze.png" width="40"> Abrir con waze';
+            controlUI.appendChild(controlText);
+    
+            // Setup the click event listeners: simply set the map to Chicago.
+            controlUI.addEventListener('click', function() {
+                window.location.href = 'https://waze.com/ul?ll=19.3647072,-99.2657406&navigate=yes';
+            });
+    
+          }
+
         function init() {
             // Basic options for a simple Google Map
             // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
@@ -852,7 +885,7 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
                 anchor: new google.maps.Point(0, 0) // anchor
             };
 
-            var icon = new google.maps.Marker({
+            var marker = new google.maps.Marker({
                 position: mkr,
                 icon: image,
                 title: 'Angus',
@@ -860,7 +893,18 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
                     content: '<p><strong>Rival</strong><br/>121 Somewhere Ave, Suite 123<br/>P: (123) 456-7890<br/>Australia</p>'
                 },
                 map: map,
+                url:'https://waze.com/ul?ll=19.3647072,-99.2657406&navigate=yes'
             });
+            google.maps.event.addListener(marker, 'click', function() {
+                window.location.href = this.url;
+            });
+
+            var centerControlDiv = document.createElement('div');
+            var centerControl = new CenterControl(centerControlDiv, map);
+
+            centerControlDiv.index = 1;
+            map.controls[google.maps.ControlPosition.TOP_CENTER].push(centerControlDiv);
+
 
         }
 

@@ -6,36 +6,47 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                Agregar categoria
+                Agregar evento
                 
                 </div>
 
                 <div class="card-body">
-                @if(isset($categoria))
-                <form action="{{url('admin/postagregarCategoria')}}" method="post" role="form" enctype="multipart/form-data" >
+                @if(isset($evento))
+                <form action="{{url('admin/postagregarEvento')}}" method="post" role="form" enctype="multipart/form-data" >
                 <input name="_token" type="hidden" value="{{ csrf_token() }}">
                 <input type="hidden" value="update" name="action">
-                <input type="hidden" value="{{$categoria->id}}" name="id">
+                <input type="hidden" value="{{$evento->id}}" name="id">
                 <div class="form-group">
                     <label for="exampleInputPassword1">Nombre</label>
-                    <input required type="text" value="{{$categoria->titulo}}" name="nombre" class="form-control" id="exampleInputPassword1" placeholder="Nombre">
+                    <input required type="text" value="{{$evento->nombre}}" name="nombre" class="form-control" id="exampleInputPassword1" placeholder="Nombre">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPassword1">Descripción</label>
-                    <textarea class="form-control" placeholder="Descripción" name="descripcion" required>{{$categoria->descripcion}}</textarea>
+                    <textarea class="form-control" placeholder="Descripción" name="descripcion" required>{{$evento->descripcion}}</textarea>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Fecha</label>
+                    <input type="text" name="fecha" class="form-control" value="{{$evento->fecha}}"   placeholder="Fecha" required>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPassword1">Imagen</label>
                     <br>
-                    @if($categoria->imagen!="")
-                    <image src="{{asset('storage/uploads/'.$categoria->imagen)}}" width="100">
+                    @if($evento->imagen!="")
+                    <image src="{{asset('storage/uploads/'.$evento->imagen)}}" width="100">
                     @endif
-                    <input type="file" name="imagen" value="" class="form-control" name="imagen" placeholder="Imagen" required>
+                    <input type="file" name="imagen" value="" class="form-control" placeholder="Imagen">
                 </div>
+
+                 <div class="form-group">
+                    <label for="exampleInputPassword1">URL del evento</label>
+                    <input type="text" name="url" class="form-control" value="{{$evento->url}}"   placeholder="Fecha" required>
+                </div>
+
+
                 <button type="submit" class="btn btn-default">Guardar</button>
                 </form>
                 @else
-                <form action="{{url('admin/postagregarCategoria')}}" method="post" role="form"  enctype="multipart/form-data">
+                <form action="{{url('admin/postagregarEvento')}}" method="post" role="form"  enctype="multipart/form-data">
                 <input name="_token" type="hidden" value="{{ csrf_token() }}">
                 <input type="hidden" value="add" name="action">
                 <div class="form-group">
@@ -47,8 +58,12 @@
                     <textarea class="form-control" placeholder="Descripción" name="descripcion" required></textarea>
                 </div>
                 <div class="form-group">
+                    <label for="exampleInputPassword1">Fecha</label>
+                    <input type="text" name="fecha" class="form-control"  placeholder="Fecha" required>
+                </div>
+                <div class="form-group">
                     <label for="exampleInputPassword1">Imagen</label>
-                    <input type="file" name="imagen" class="form-control" name="imagen" placeholder="Imagen" required>
+                    <input type="file" name="imagen" class="form-control"  placeholder="Imagen">
                 </div>
                 <button type="submit" class="btn btn-default">Guardar</button>
                 </form>

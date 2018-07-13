@@ -54,6 +54,9 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ url('admin/categorias') }}">Categorías</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url('admin/eventos') }}">Eventos</a>
+                            </li>
                             <li class="nav-item dropdown">
                                     <a class="nav-link" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();

@@ -5,7 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Categoria;
 use App\Menu;
-
+use App\Evento;
+use Illuminate\Support\Facades\Storage;
 class HomeController extends Controller
 {
     /**
@@ -33,6 +34,7 @@ class HomeController extends Controller
         $menu=Menu::all();
         return view('home')->with('menus',$menu);
     }
+   
 
     public function modificarMenu($id)
     {
@@ -71,6 +73,8 @@ class HomeController extends Controller
         }else{
             $menu=Menu::find($request->id);
         }
+            
+
             $menu->titulo=$request->nombre;
             $menu->descripcion=$request->descripcion;
             $menu->precio=$request->precio;
@@ -87,10 +91,18 @@ class HomeController extends Controller
         }else{
             $menu=Categoria::find($request->id);
         }
+            if($request->hasFile('imagen'))
+            {
+                $id=uniqid();
+                $image = $request->file('imagen');
+                $nombre=$request->file('imagen')->getClientOriginalName();
+                $extension = $image->getClientOriginalExtension();
+                $image->storeAs('public/uploads', $id.'.'.$extension);
+                $menu->imagen=$id.'.'.$extension;
+            }
             $menu->titulo=$request->nombre;
             $menu->descripcion=$request->descripcion;
             //$menu->imagen=$request->precio;
-            $menu->imagen="";
             $menu->save();
             return redirect('admin/categorias');
     }
@@ -108,6 +120,55 @@ class HomeController extends Controller
         $menu=Categoria::find($id);
         $menu->delete();
         return redirect('admin/categorias');
+    }
+
+    public function eventos()
+    {
+        $eventos=Evento::all();
+        return view('eventos')->with('eventos',$eventos);
+    }
+
+    public function agregarEvento()
+    {
+        return view('agregarEvento');
+    }
+    public function postagregarEvento(Request $request)
+    {
+        if($request->action=="add")
+        {
+            $evento=new Evento;
+        }else{
+            $evento=Evento::find($request->id);
+        }
+
+        if($request->hasFile('imagen'))
+        {
+            $id=uniqid();
+            $image = $request->file('imagen');
+            $nombre=$request->file('imagen')->getClientOriginalName();
+            $extension = $image->getClientOriginalExtension();
+            $image->storeAs('public/uploads', $id.'.'.$extension);
+            $evento->imagen=$id.'.'.$extension;
+        }
+        $evento->nombre=$request->nombre;
+        $evento->descripcion=$request->descripcion;
+        $evento->fecha=$request->fecha;
+        $evento->url=$request->url;
+        $evento->save();
+        return redirect('admin/eventos');
+    }
+
+    public function modificarEvento($id)
+    {
+        $evento=Evento::find($id);
+        return view('agregarEvento')->with('evento',$evento);
+    }
+
+    public function eliminarEvento($id)
+    {
+        $evento=Evento::find($id);
+        $evento->delete();
+        return redirect('admin/eventos');
     }
 
     

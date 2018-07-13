@@ -27,6 +27,13 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
     Route::get('modificarCategoria/{id}','HomeController@modificarCategoria');
     Route::post('postmodificarCategoria','HomeController@postagregarCategoria');
     Route::get('eliminarCategoria/{id}','HomeController@eliminarcategoria');
+
+    Route::get('eventos','HomeController@eventos');
+    Route::get('agregarEvento','HomeController@agregarEvento');
+    Route::post('postagregarEvento','HomeController@postagregarEvento');
+    Route::get('modificarEvento/{id}','HomeController@modificarEvento');
+    Route::post('postmodificarEvento','HomeController@postagregarEvento');
+    Route::get('eliminarEvento/{id}','HomeController@eliminarEvento');
 });
 
 

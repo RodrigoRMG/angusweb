@@ -6,13 +6,15 @@ use Illuminate\Http\Request;
 use DrewM\MailChimp\MailChimp;
 use App\Categoria;
 use App\Menu;
+use App\Evento;
 
 class GeneralController extends Controller
 {
     public function index()
     {
         $menus=Menu::take(10)->get();
-        return view('index')->with('menus',$menus);
+        $eventos=Evento::all();
+        return view('index')->with('menus',$menus)->with('eventos',$eventos);
     }
 
     public function menu()

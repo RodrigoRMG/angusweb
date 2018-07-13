@@ -10,7 +10,7 @@
       <div class="main">
 
       @foreach($categorias as $categoria)
-        <section class="module bg-dark-30 parallax-bg restaurant-menu-bg" data-background="assets/images/restaurant/cake_pastries_bg.jpg">
+        <section class="module bg-dark-30 parallax-bg restaurant-menu-bg" data-background="{{asset('storage/uploads/'.$categoria->imagen)}}">
           <div class="container">
             <div class="row">
               <div class="col-sm-2 col-sm-offset-5">

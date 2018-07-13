@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Menu extends Migration
+class AddUrlEventos extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,8 @@ class Menu extends Migration
      */
     public function up()
     {
-        Schema::create('menu', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('titulo');
-            $table->string('descripcion');
-            $table->string('precio');
-            $table->integer('categoria');
-            $table->timestamps();
+        Schema::table('eventos', function (Blueprint $table) {
+            $table->string('url');
         });
     }
 
