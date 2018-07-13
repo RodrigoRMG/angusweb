@@ -24,7 +24,9 @@ Nuestra filosofía es manejarnos dentro de un sistema de servicio altamente cali
                 <div class="widget">
                   <h5 class="widget-title font-alt">Eventos</h5>
                   <ul class="icon-list">
-                    <li>Próximamente...</li>
+                    @foreach($eventos as $evento)
+                    <li><a href="{{$evento->url}}">{{$evento->nombre}} - {{$evento->fecha}}</a></li>
+                    @endforeach
                   </ul>
                 </div>
               </div>
@@ -40,12 +42,14 @@ Nuestra filosofía es manejarnos dentro de un sistema de servicio altamente cali
             </div>
           </div>
         </div>
-        <hr class="divider-d">
+        
         <footer class="footer bg-dark">
+        
           <div class="container">
             <div class="row">
+            <hr class="divider-d" style="border-top:1px dotted #c2c2c2">
               <div class="col-sm-6">
-                <p class="copyright font-alt">UNA EMPRESA DE  OPERADORA  DE CARNES Y CHAMORROS  S.A. DE C.V. © 2018 ANGUS SANTA FE , TODOS LOS DERECHOS RESERVADOS.</p>
+                <p class="">UNA EMPRESA DE  OPERADORA  DE CARNES Y CHAMORROS  S.A. DE C.V. © 2018 ANGUS SANTA FE , TODOS LOS DERECHOS RESERVADOS.</p>
               </div>
               <div class="col-sm-6">
                 <div class="footer-social-links"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-instagram"></i></a><a href="#"><i class="fa fa-whatsapp"></i></a><a href="#"><i class="fa fa-mail"></i></a>

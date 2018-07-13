@@ -177,7 +177,7 @@
 
             <div class="row multi-columns-row">
               <?php 
-              for($c=0;$c<10;$c++)
+              for($c=0;$c<12;$c++)
               {
               ?>
               <div class="col-sm-6 col-md-4 col-lg-4">
@@ -199,7 +199,7 @@
           </div>
         </section>
 
-        <section class="module"  id="reservar" style="padding-bottom:20px">
+        <section class="module"  id="reservar" style="padding-bottom:20px;text-align:center;">
         <div class="container">
         <div class="row">
               <div class="col-sm-8 col-sm-offset-2">
@@ -228,8 +228,11 @@
               <div class="col-sm-6 col-md-6 col-lg-4 col-lg-offset-2">
                 <div class="callout-text font-alt">
                   <h3 class="callout-title">Suscribirse</h3>
-                  <p>suscríbete ahora y recibe todas nuestras noticias</p>
+                  
                 </div>
+                <div class="widget">
+                  <p>suscríbete ahora y recibe todas nuestras noticias</p>
+            </div>
               </div>
               <div class="col-sm-6 col-md-6 col-lg-4">
                 <div class="callout-btn-box">
