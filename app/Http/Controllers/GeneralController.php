@@ -14,7 +14,7 @@ class GeneralController extends Controller
 {
     public function index()
     {
-        $menus=Menu::take(10)->get();
+        $menus=Menu::take(10)->orderBy('created_at','desc')->get();
         $eventos=Evento::all();
         return view('index')->with('menus',$menus)->with('eventos',$eventos);
     }
