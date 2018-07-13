@@ -13,6 +13,7 @@
 
 Route::get('/','GeneralController@index');
 
+
 Route::prefix('admin')->middleware(['auth'])->group(function () {
     Route::get('menu','HomeController@menu');
     Route::get('modificarMenu/{id}','HomeController@modificarMenu');
@@ -38,6 +39,10 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
 
 
 Route::get('menu','GeneralController@menu');
+Route::get('contacto','GeneralController@contacto');
+Route::post('sendMailContact','GeneralController@sendMailContact');
+
+
 
 Route::post('suscribe','GeneralController@suscribe');
 

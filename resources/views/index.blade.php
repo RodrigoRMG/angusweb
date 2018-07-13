@@ -116,14 +116,7 @@
 
 @include('video')
 
-<section id="map-section" >
-          <div id="map"></div>
-          
-        </section>
-
-
-
-        <section class="module" id="menu">
+  <section class="module" id="eventos">
           <div class="container">
             <div class="row">
               <div class="col-sm-2 col-sm-offset-5">
@@ -153,7 +146,7 @@
                       @if($evento->url!="")
                       <a class="btn btn-border-d mt-50" href="{{url($evento->url)}}" target="blank">Ver detalles</a> 
                       @endif
-                      <a class="btn btn-border-d mt-50" href="{{url('menu.pdf')}}" target="blank">Reservar</a></div>
+                      <a class="btn btn-border-d mt-50" href="{{url('/')}}#reservar" name="reservar">Reservar</a></div>
                     </div>
                     <div class="col-sm-2 menu-price-detail">
                       <h4 class="menu-price font-alt">{{$evento->fecha}}</h4>
@@ -173,6 +166,60 @@
            
           </div>
         </section>
+
+        <section class="">
+          <div class="container">
+          <div class="row">
+              <div class="col-sm-8 col-sm-offset-2">
+                <h2 class="module-title font-alt">Galería</h2>
+              </div>
+            </div>
+
+            <div class="row multi-columns-row">
+              <?php 
+              for($c=0;$c<10;$c++)
+              {
+              ?>
+              <div class="col-sm-6 col-md-4 col-lg-4">
+                <div class="gallery-item">
+                  <div class="gallery-image"><a class="gallery" href="{{url('image/galeria/00')}}{{$c}}.png" >
+                    <img src="{{url('image/galeria/00')}}{{$c}}.png" alt="Gallery Image 1"/>
+                      <div class="gallery-caption">
+                        <div class="gallery-icon"><span class="icon-magnifying-glass"></span></div>
+                      </div></a></div>
+                </div>
+              </div>
+
+              <?php 
+              }
+              ?>
+              
+
+            </div>
+          </div>
+        </section>
+
+        <section class="module"  id="reservar" style="padding-bottom:20px">
+        <div class="container">
+        <div class="row">
+              <div class="col-sm-8 col-sm-offset-2">
+                <h2 class="module-title font-alt">Reservar</h2>
+              </div>
+            </div>
+        <script type='text/javascript' src='//www.opentable.com/widget/reservation/loader?rid=144775&type=multi&theme=wide&iframe=true&overlay=false&domain=com&lang=es-MX'></script>
+        </div>
+        </section>
+
+<section id="map-section" >
+          <div id="map"></div>
+          
+        </section>
+
+
+        
+
+
+      
         
 
              <div class="module-small bg-dark">
@@ -198,6 +245,23 @@
             </div>
           </div>
         </div>
+
+        <script>
+  $(function() {
+      $('a[href*=#]:not([href=#])').click(function() {
+          if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+              var target = $(this.hash);
+              target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+              if (target.length) {
+                  $('html,body').animate({
+                      scrollTop: target.offset().top
+                  }, 1000);
+                  return false;
+              }
+          }
+      });
+  });
+</script>
 @include('footer')
 
 

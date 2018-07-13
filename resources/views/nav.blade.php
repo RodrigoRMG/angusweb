@@ -10,10 +10,10 @@
             <ul class="nav navbar-nav navbar-right" style="margin-top:25px;">
                 <li class=""><a class="" href="{{url('/')}}" >Inicio</a></li>
                 <li class=""><a class="" href="{{url('menu')}}" >Menú</a></li>
-                <li class=""><a class="" href="#" data-toggle="dropdown">Eventos</a></li>
-                <li class=""><a class="" href="#" data-toggle="dropdown">Reservar</a></li>
-                <li class=""><a class="" href="#" data-toggle="dropdown">Facturar</a></li>
-                <li class=""><a class="" href="#" data-toggle="dropdown">Contacto</a></li>
+                <li class=""><a class="" href="{{url('/')}}#eventos">Eventos</a></li>
+                <li class=""><a class="" href="{{url('/')}}#reservar" >Reservar</a></li>
+                <li class=""><a class="" href="#" >Facturar</a></li>
+                <li class=""><a class="" href="{{url('contacto')}}" >Contacto</a></li>
             </ul>
           </div>
         </div>
