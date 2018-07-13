@@ -65,6 +65,12 @@
                     <label for="exampleInputPassword1">Imagen</label>
                     <input type="file" name="imagen" class="form-control"  placeholder="Imagen">
                 </div>
+
+                <div class="form-group">
+                    <label for="exampleInputPassword1">URL del evento</label>
+                    <input type="text" name="url" class="form-control" value="{{$evento->url}}"   placeholder="Fecha" required>
+                </div>
+                
                 <button type="submit" class="btn btn-default">Guardar</button>
                 </form>
                 @endif
