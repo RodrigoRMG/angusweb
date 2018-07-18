@@ -21,8 +21,9 @@ class GeneralController extends Controller
 
     public function menu()
     {
+        $eventos=Evento::all();
         $categorias=Categoria::all();
-        return view('menu')->with('categorias',$categorias);
+        return view('menu')->with('categorias',$categorias)->with('eventos',$eventos);
     }
 
     public function suscribe()
