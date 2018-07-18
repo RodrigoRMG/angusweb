@@ -46,6 +46,8 @@
               </div>
               <div class="col-sm-6">
                 <h4 class="font-alt">Visítanos</h4><br/>
+                <img src="{{url('image/contacto2.jpg')}}" style="margin-left:25px;">
+                <br><br>
                 <ul class="list-unstyled">
                 <ul class="icon-list">
                     <li>Dirección: Guillermo González Camarena  N° 1450, C.P. 01210; Ciudad de México; México.</li>
