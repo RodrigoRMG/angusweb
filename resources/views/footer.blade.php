@@ -52,7 +52,7 @@ Nuestra filosofía es manejarnos dentro de un sistema de servicio altamente cali
                 <p class="">UNA EMPRESA DE  OPERADORA  DE CARNES Y CHAMORROS  S.A. DE C.V. © 2018 ANGUS SANTA FE , TODOS LOS DERECHOS RESERVADOS.</p>
               </div>
               <div class="col-sm-6">
-                <div class="footer-social-links"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-instagram"></i></a><a href="#"><i class="fa fa-whatsapp"></i></a><a href="#"><i class="fa fa-mail"></i></a>
+                <div class="footer-social-links"><a  target="blank" href="http://faceboo.com/angus.santafe"><i class="fa fa-facebook"></i></a><a  target="blank" href="http://instagram.com/angus_santa_fe"><i class="fa fa-instagram"></i></a><a  href="mailto:contacto@angus-santafe.mx"><i class="fa fa-envelope"></i></a>
                 </div>
               </div>
             </div>
