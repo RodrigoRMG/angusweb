@@ -23,6 +23,8 @@
         <!-- Main stylesheet and color file-->
         <link href="{{url('assets/css/style.css')}}" rel="stylesheet">
         <link id="color-scheme" href="{{url('assets/css/colors/default.css')}}" rel="stylesheet">
+        <link rel="icon" href="{{url('favicon.ico')}}" type="image/x-icon"/>
+        <link rel="shortcut icon" href="{{url('favicon.ico')}}" type="image/x-icon"/>
 
     </head>
     <body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
