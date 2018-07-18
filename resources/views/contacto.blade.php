@@ -45,7 +45,7 @@
                 <div class="ajax-response font-alt" id="contactFormResponse"></div>
               </div>
               <div class="col-sm-6">
-                <h4 class="font-alt">Visítanos</h4><br/>
+                <h4 class="font-alt" style="margin-left:25px;">Visítanos</h4><br/>
                 <img src="{{url('image/contacto2.jpg')}}" style="margin-left:25px;">
                 <br><br>
                 <ul class="list-unstyled">
