@@ -26,6 +26,23 @@
         <link rel="icon" href="{{url('favicon.ico')}}" type="image/x-icon"/>
         <link rel="shortcut icon" href="{{url('favicon.ico')}}" type="image/x-icon"/>
 
+        <meta name='description' itemprop='description' content='Restaurante Butcher House en Polanco, Revolución, Aeropuerto, Satelite, Zona Rosa, Puebla, Queretaro, Santa Fe, Loreto | Angus Butcher House' />
+        <meta name='keywords' content='Restaurante en Polanco, Restaurante en RevoluciÃ³n, Restaurante en Aeropuerto, Restaurante en Satelite, Restaurante en Zona Rosa, Restaurante en Puebla, Restaurante en Queretaro, Restaurante en Villahermosa, Restaurante en Loreto, Restaurantes en Polanco, Restaurantes en RevoluciÃ³n, Restaurantes en Aeropuerto, Restaurantes en Satelite, Restaurantes en Zona en Rosa, Restaurantes en Puebla, Restaurantes en Queretaro, Restaurantes en Villahermosa, Restaurantes en Santa Fe, Restaurante Angus Butcher House, Restaurante Angus, Restaurante Butcher House, Butcher House' />
+        <meta property="og:description"content="Restaurante Butcher House en Polanco, Revolución, Aeropuerto, Satelite, Zona Rosa, Puebla, Queretaro, Santa Fe, Loreto | Angus Butcher House" />
+        <meta property="og:title"content="Angus Santa Fe" />
+        <meta property="og:url"content="http://www.angus-santafe.mx" />
+        <meta name="copyright" content="Indexceed" /> 
+        <meta property="og:type"content="article" />
+        <meta property="og:locale"content="es-mx" />
+        <meta property="og:site_name"content="Angus Santa Fe" />
+        <meta property="og:image"content="http://www.angus.com.mx/skin/default/images/angus_4.jpg" />
+        <meta property="og:image:url"content="http://www.angus.com.mx/skin/default/images/angus_4.jpg" />
+        <meta property="og:image:size"content="300" />
+
+        <meta name="twitter:card"content="Restaurante Butcher House en Polanco, Revolución, Aeropuerto, Satelite, Zona Rosa, Puebla, Queretaro, Santa Fe, Loreto | Angus Butcher House" />
+        <meta name="twitter:title"content="Angus Santa Fe" />
+
+
     </head>
     <body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
         <main>

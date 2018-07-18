@@ -54,6 +54,10 @@ Nuestra filosofía es manejarnos dentro de un sistema de servicio altamente cali
               <div class="col-sm-6">
                 <div class="footer-social-links"><a  target="blank" href="http://faceboo.com/angus.santafe"><i class="fa fa-facebook"></i></a><a  target="blank" href="http://instagram.com/angus_santa_fe"><i class="fa fa-instagram"></i></a><a  href="mailto:contacto@angus-santafe.mx"><i class="fa fa-envelope"></i></a>
                 </div>
+                <div class="col-sm-12" style="text-align:right">
+                <br>
+                Made by <a href="http://indexceed.com" target="blank">Indexceed</a>
+                </div>
               </div>
             </div>
           </div>
