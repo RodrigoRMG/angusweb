@@ -45,7 +45,8 @@ class GeneralController extends Controller
 
     public function contacto()
     {
-        return view('contacto');
+        $eventos=Evento::all();
+        return view('contacto')->with('eventos',$eventos);
     }
 
     public function sendMailContact()
