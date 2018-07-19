@@ -1,3 +1,3 @@
 <div>
-    Nuevo contacto: {{ $mensaje}}
+    Nuevo mensaje de contacto: <br><br>{!! $mensaje!!}
 </div>

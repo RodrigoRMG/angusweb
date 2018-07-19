@@ -13,7 +13,7 @@
                 <li class=""><a class="" href="{{url('/')}}#galeria" >Galería</a></li>
                 <li class=""><a class="" href="{{url('/')}}#eventos">Eventos</a></li>
                 <li class=""><a class="" href="{{url('/')}}#reservar" >Reservar</a></li>
-                <li class=""><a class="" href="#" >Facturar</a></li>
+                <li class=""><a class="" href="{{url('facturar')}}" >Facturar</a></li>
                 <li class=""><a class="" href="{{url('contacto')}}" >Contacto</a></li>
             </ul>
           </div>

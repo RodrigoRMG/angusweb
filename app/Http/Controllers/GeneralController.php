@@ -9,6 +9,7 @@ use App\Menu;
 use App\Evento;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\NuevoContato;
+use App\Mail\NuevaFactura;
 
 class GeneralController extends Controller
 {
@@ -48,6 +49,13 @@ class GeneralController extends Controller
         $eventos=Evento::all();
         return view('contacto')->with('eventos',$eventos);
     }
+
+    public function facturar()
+    {
+        $eventos=Evento::all();
+        return view('facturar')->with('eventos',$eventos);
+    }
+
 
     public function sendMailContact()
     {
@@ -97,14 +105,14 @@ class GeneralController extends Controller
         $to = 'rodrigo_2392@hotmail.com';  // please change this email id
         $subject = 'Nuevo mensaje de contacto Angus Santa Fe web';
 
-        $body = "Nombre: $name <br> E-Mail: $email <br> Mensaje:\n $message";
+        $body = "Nombre: $name <br><br> E-Mail: $email <br><br> Mensaje:\n $message";
 
         $headers = "De: ".$from;
 
 
         //send the email
         $result = '';
-        Mail::to($to)->send(new NuevoContato($body));
+        Mail::to($to)->send(new NuevoContato($body,$from));
 
         $result .= '<div class="alert alert-success alert-dismissible" role="alert">';
         $result .= '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>';
@@ -114,6 +122,77 @@ class GeneralController extends Controller
         echo $result;
         die();
 
+
+        echo $result;
+    }
+
+    public function sendMailFactura()
+    {
+        $errors = array();
+
+        // Check if name has been entered
+        if (!isset($_POST['facidtoken'])) {
+            $errors['facidtoken'] = 'Por favor ingresa el ID de la factura';
+        }
+
+        if (!isset($_POST['facnombre'])) {
+            $errors['facnombre'] = 'Por favor ingresa tu nombre';
+        }
+
+        if (!isset($_POST['facrfc'])) {
+            $errors['facrfc'] = 'Por favor ingresa tu R.F.C.';
+        }
+
+        if (!isset($_POST['facdireccion'])) {
+            $errors['facdireccion'] = 'Por favor ingresa tu nombre';
+        }
+
+        // Check if email has been entered and is valid
+        if (!isset($_POST['facemail']) || !filter_var($_POST['facemail'], FILTER_VALIDATE_EMAIL)) {
+            $errors['email'] = 'Por favor ingresa un email válido';
+        }
+        $errorOutput = '';
+
+        if(!empty($errors)){
+
+            $errorOutput .= '<div class="alert alert-danger alert-dismissible" role="alert">';
+            $errorOutput .= '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>';
+
+            $errorOutput  .= '<ul>';
+
+            foreach ($errors as $key => $value) {
+                $errorOutput .= '<li>'.$value.'</li>';
+            }
+
+            $errorOutput .= '</ul>';
+            $errorOutput .= '</div>';
+
+            echo $errorOutput;
+            die();
+        }
+
+
+
+        $idtoken = $_POST['facidtoken'];
+        $nombre = $_POST['facnombre'];
+        $rfc = $_POST['facrfc'];
+        $direccion = $_POST['facdireccion'];
+        $email = $_POST['facemail'];
+        
+
+        $body = "ID TOKEN: $idtoken <br><br> Nombre: $nombre <br><br> R.F.C.: $rfc <br><br> E-Mail: $email <br><br> Dirección: $direccion";
+
+
+
+
+        //send the email
+        $result = '';
+        Mail::to('rodrigo_2392@hotmail.com')->send(new NuevaFactura($body,$email));
+
+        $result .= '<div class="alert alert-success alert-dismissible" role="alert">';
+        $result .= '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>';
+        $result .= 'Muy pronto le haremos llegar su factura, gracias por su preferencia.';
+        $result .= '</div>';
 
         echo $result;
     }

@@ -25,7 +25,7 @@
                 <h4 class="font-alt">Contactar</h4><br/>
                 <form id="contactForm" role="form" method="post" action="{{url('sendMailContact')}}">
                   <div class="form-group">
-                    <label class="sr-only" for="name">Name</label>
+                    <label class="sr-only" for="name">Nombre</label>
                     <input class="form-control" type="text" id="name" name="name" placeholder="Tu nombre*" required="required" data-validation-required-message="Ingresa tu nombre."/>
                     <p class="help-block text-danger"></p>
                   </div>

@@ -40,7 +40,9 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
 
 Route::get('menu','GeneralController@menu');
 Route::get('contacto','GeneralController@contacto');
+Route::get('facturar','GeneralController@facturar');
 Route::post('sendMailContact','GeneralController@sendMailContact');
+Route::post('sendMailFactura','GeneralController@sendMailFactura');
 
 
 

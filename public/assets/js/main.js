@@ -468,7 +468,7 @@
                 $cfsubmit = $("#cfsubmit"),
                 cfsubmitText = $cfsubmit.text();
 
-            $cfsubmit.text("Sending...");
+            $cfsubmit.text("Enviando...");
 
 
             $.ajax(
@@ -484,7 +484,47 @@
                         $('#contactForm textarea[name=message]').val('');
                     },
                     error: function (data) {
-                        alert("Error occurd! Please try again");
+                        alert("Ha ocurrido un error, por favor intentelo nuevamente");
+                        $cfsubmit.text(cfsubmitText);
+                    }
+                });
+
+            return false;
+
+        });
+
+
+        $("#facturaForm").submit(function (e) {
+
+            e.preventDefault();
+            var $ = jQuery;
+
+            var postData = $(this).serializeArray(),
+                formURL = $(this).attr("action"),
+                $cfResponse = $('#facturaFormResponse'),
+                $cfsubmit = $("#facturasubmit"),
+                cfsubmitText = $cfsubmit.text();
+
+            $cfsubmit.text("Enviando...");
+
+
+            $.ajax(
+                {
+                    url: formURL,
+                    type: "POST",
+                    data: postData,
+                    success: function (data) {
+                        $cfResponse.html(data);
+                        $cfsubmit.text(cfsubmitText);
+                        $('#facturaForm input[name=facidtoken]').val('');
+                        $('#facturaForm input[name=facnombre]').val('');
+                        $('#facturaForm textarea[name=facrfc]').val('');
+                        $('#facturaForm textarea[name=facemail]').val('');
+                        $('#facturaForm textarea[name=facdireccion]').val('');
+                    },
+                    error: function (data) {
+                        alert("Ha ocurrido un error, por favor intentelo nuevamente");
+                        $cfsubmit.text("Enviar");
                     }
                 });
 

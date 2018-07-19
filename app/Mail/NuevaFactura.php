@@ -7,9 +7,10 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class NuevoContato extends Mailable
+class NuevaFactura extends Mailable
 {
     use Queueable, SerializesModels;
+
     public $mensaje;
     public $emailfrom;
 
@@ -31,6 +32,6 @@ class NuevoContato extends Mailable
      */
     public function build()
     {
-        return $this->from($this->emailfrom)->view('nuevoContacto')->subject('Nuevo mensaje de contacto Angus Santa Fe web');
+        return $this->from($this->emailfrom)->view('nuevaFactura')->subject('Nueva solicitud de factura - Angus Santa Fe web');
     }
 }
