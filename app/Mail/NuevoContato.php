@@ -12,16 +12,18 @@ class NuevoContato extends Mailable
     use Queueable, SerializesModels;
     public $mensaje;
     public $emailfrom;
+    public $nombre;
 
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($mensaje,$emailfrom)
+    public function __construct($nombre,$mensaje,$emailfrom)
     {
         $this->mensaje = $mensaje;
         $this->emailfrom = $emailfrom;
+        $this->nombre = $nombre;
     }
 
     /**

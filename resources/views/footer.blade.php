@@ -56,7 +56,7 @@ Nuestra filosofía es manejarnos dentro de un sistema de servicio altamente cali
                 </div>
                 <div class="col-sm-12" style="text-align:right">
                 <br>
-                Made by <a href="http://indexceed.com" target="blank">Indexceed</a>
+                Created by <a href="http://indexceed.com" target="blank">Indexceed</a>
                 </div>
               </div>
             </div>

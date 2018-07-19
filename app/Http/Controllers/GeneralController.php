@@ -112,7 +112,7 @@ class GeneralController extends Controller
 
         //send the email
         $result = '';
-        Mail::to($to)->send(new NuevoContato($body,$from));
+        Mail::to($to)->send(new NuevoContato($name,$message,$from));
 
         $result .= '<div class="alert alert-success alert-dismissible" role="alert">';
         $result .= '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>';
@@ -180,14 +180,10 @@ class GeneralController extends Controller
         $email = $_POST['facemail'];
         
 
-        $body = "ID TOKEN: $idtoken <br><br> Nombre: $nombre <br><br> R.F.C.: $rfc <br><br> E-Mail: $email <br><br> Dirección: $direccion";
-
-
-
 
         //send the email
         $result = '';
-        Mail::to('rodrigo_2392@hotmail.com')->send(new NuevaFactura($body,$email));
+        Mail::to('rodrigo_2392@hotmail.com')->send(new NuevaFactura($idtoken,$nombre,$rfc,$email,$direccion));
 
         $result .= '<div class="alert alert-success alert-dismissible" role="alert">';
         $result .= '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>';

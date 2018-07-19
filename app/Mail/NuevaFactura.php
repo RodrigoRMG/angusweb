@@ -11,18 +11,24 @@ class NuevaFactura extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public $mensaje;
+    public $id;
+    public $nombre;
+    public $rfc;
     public $emailfrom;
+    public $direccion;
 
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($mensaje,$emailfrom)
+    public function __construct($id,$nombre,$rfc,$emailfrom,$direccion)
     {
-        $this->mensaje = $mensaje;
+        $this->id = $id;
+        $this->nombre = $nombre;
+        $this->rfc = $rfc;
         $this->emailfrom = $emailfrom;
+        $this->direccion = $direccion;
     }
 
     /**
