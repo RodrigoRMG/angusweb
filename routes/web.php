@@ -11,7 +11,8 @@
 |
 */
 
-Route::get('/','GeneralController@index');
+Route::get('/',function () {
+});
 
 
 Route::prefix('admin')->middleware(['auth'])->group(function () {
