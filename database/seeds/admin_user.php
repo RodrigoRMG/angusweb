@@ -12,9 +12,9 @@ class admin_user extends Seeder
     public function run()
     {
         DB::table('users')->insert([
-            'name' => 'admin',
-            'email' => 'admin@app.com',
-            'password' => bcrypt('secret'),
+            'name' => 'contacto@angus-santafe.mx',
+            'email' => 'contacto@angus-santafe.mx',
+            'password' => bcrypt('ConAng#2018'),
         ]);
     }
 }

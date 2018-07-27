@@ -49,14 +49,14 @@ Nuestra filosofía es manejarnos dentro de un sistema de servicio altamente cali
             <div class="row">
             <hr class="divider-d" style="border-top:1px dotted #c2c2c2">
               <div class="col-sm-6">
-                <p class="">UNA EMPRESA DE  OPERADORA  DE CARNES Y CHAMORROS  S.A. DE C.V. © 2018 ANGUS SANTA FE , TODOS LOS DERECHOS RESERVADOS.</p>
+                <p class="">UNA EMPRESA  OPERADORA DE CHAMORROS Y CARNES LUCAS, S.A de C.V. 2018 ANGUS SANTA FE , TODOS LOS DERECHOS RESERVADOS.</p>
               </div>
               <div class="col-sm-6">
                 <div class="footer-social-links"><a  target="blank" href="http://faceboo.com/angus.santafe"><i class="fa fa-facebook"></i></a><a  target="blank" href="http://instagram.com/angus_santa_fe"><i class="fa fa-instagram"></i></a><a  href="mailto:contacto@angus-santafe.mx"><i class="fa fa-envelope"></i></a>
                 </div>
                 <div class="col-sm-12" style="text-align:right">
                 <br>
-                Created by <a href="http://indexceed.com" target="blank">Indexceed</a>
+                  <a href="{{url('politica-de-privacidad')}}" target="blank">Política de privacidad</a> | <a href="{{url('terminos-y-condiciones')}}" target="blank">Términos y condiciones</a>
                 </div>
               </div>
             </div>

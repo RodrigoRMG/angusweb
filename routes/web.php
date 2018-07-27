@@ -44,6 +44,11 @@ Route::get('facturar','GeneralController@facturar');
 Route::post('sendMailContact','GeneralController@sendMailContact');
 Route::post('sendMailFactura','GeneralController@sendMailFactura');
 
+Route::get('politica-de-privacidad','GeneralController@politicas');
+Route::get('terminos-y-condiciones','GeneralController@terminos');
+
+
+
 
 
 Route::post('suscribe','GeneralController@suscribe');

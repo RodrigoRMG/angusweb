@@ -20,6 +20,18 @@ class GeneralController extends Controller
         return view('index')->with('menus',$menus)->with('eventos',$eventos);
     }
 
+    public function politicas()
+    {
+        $eventos=Evento::all();
+        return view('politicas')->with('eventos',$eventos);
+    }
+
+    public function terminos()
+    {
+        $eventos=Evento::all();
+        return view('terminos')->with('eventos',$eventos);
+    }
+
     public function menu()
     {
         $eventos=Evento::all();
